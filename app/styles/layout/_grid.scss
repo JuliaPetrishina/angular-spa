@@ -1,0 +1,32 @@
+@import "../utils/mixins";
+
+.b-container {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.b-flex {
+  display: flex;
+
+  @include respond-to(small) {
+    display: block;
+  }
+}
+
+.b-flex__item {
+  flex: 1 0 auto;
+  text-align: right;
+
+  @include respond-to(small) {
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+<div ng-controller="GoogleMapController" class="b-map_holder">
+  <h1>Choose Your Country and Go!</h1>
+
+<div class="b-flex">
+  <div class="b-list__holder">
+    <input class="b-autocomplete" id="autocompete"/>
+
+    <ul class="b-list" ng-repeat="city in cities">
+      <li class="b-list__item">{{city.place}}
+        <i class="b-btn_close" ng-click="removeItem(city)"></i>
+      </li>
+    </ul>
+  </div>
+  <div class="b-map b-flex__item" id="map"></div>
+</div>
+
+
+</div>
+

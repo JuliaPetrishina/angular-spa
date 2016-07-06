@@ -1,0 +1,24 @@
+@import "../utils/mixins";
+
+.b-list__holder{
+  width: 20%;
+  height: 70vh;
+  padding: 1rem;
+  display: inline-block;
+  background-color: $secondary-color;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+
+  @include respond-to(small){
+    width: 100%;
+    height: auto;
+  }
+}
+
+.b-list{
+  padding: 0;
+}
+
+.b-list__item{
+  position: relative;
+  border-bottom: 1px solid $gray-mercury;
+}

@@ -1,0 +1,41 @@
+$font-stack: 'Roboto', 'Arial', sans-serif;
+$font-bold: 600;
+$font-normal: 400;
+$font-light: 300;
+
+
+$base-color: #000;
+$secondary-color: #fff;
+$brand-color: #5f55b6;
+$accent-color: #44addd;
+
+/**
+ * Colors: Common: Grey
+ * Named with http://chir.ag/projects/name-that-color
+ */
+$gray-boulder: #767676;
+$gray-trout: #4c5059;
+$gray-tundora: #444444;
+$gray-mercury: #e4e4e4;
+$gray-charade: #282c37;
+$gray-gallery: #efefef;
+$gray-emperor: #535353;
+
+
+/**
+ * Vertical Rhythm, which is used throughout the code.
+ * @type Length
+ */
+$vertical-rhythm-baseline: 1.5;
+
+
+/**
+ * Variables for mixin respond-to
+ */
+$breakpoints: (
+        'extra-small': (max-width: 400px),
+        'small': (max-width: 600px),
+        'medium': (max-width: 800px),
+        'large': (max-width: 1000px),
+        'huge': (max-width: 1200px),
+);

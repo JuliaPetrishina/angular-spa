@@ -1,0 +1,27 @@
+<div class="b-container">
+  <h1>Welcome to the SPA!</h1>
+
+  <div class="b-login">
+    <div class="b-tile b-tile_info">
+      <p class="b-tile__text"><span class="b-tile__key">Username:</span> test</p>
+      <p class="b-tile__text"><span class="b-tile__key">Password:</span> test</p>
+    </div>
+    <div ng-show="error" class="b-tile b-tile_error">{{error}}</div>
+    <form name="form" ng-submit="login()" role="form">
+      <div class="b-form__group">
+        <input class="b-form__control" placeholder="Username" type="text" name="username" id="username"  ng-model="username" required />
+        <span class="b-form__help" ng-show="form.username.$dirty && form.username.$error.required">Username is required</span>
+      </div>
+      <div class="b-form__group">
+        <input class="b-form__control" placeholder="Password" type="password" name="password" id="password"  ng-model="password" required />
+        <span class="b-form__help" ng-show="form.password.$dirty && form.password.$error.required" >Password is required</span>
+      </div>
+      <div class="b-btn__group">
+        <button class="b-btn b-btn_primary" type="submit" ng-disabled="form.$invalid || dataLoading" >Login</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+

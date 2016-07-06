@@ -1,0 +1,50 @@
+@import "../utils/mixins";
+
+.b-form {
+  padding: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+              0 1px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+.b-form__group {
+  margin-bottom: 1.5rem;
+}
+
+.b-form__label {
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: $gray-emperor;
+  position: relative;
+  text-align: left;
+  margin-bottom: 0.125rem;
+}
+
+.b-form__control {
+  border: none;
+  border-bottom: 1px solid $gray-mercury;
+  border-radius: 2px;
+  height: 2rem;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.b-form__inline {
+  .b-form__group {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  @include respond-to(small){
+    .b-form__group {
+      display: block;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+
+}

@@ -1,0 +1,23 @@
+<header class="b-header">
+  <nav class="b-navbar">
+    <div class="b-container b-flex">
+      <div class="b-navbar__header">
+        <a class="b-navbar__brand" href="#/">
+          <img class="b-navbar__img" src="images/angular-logo.svg" alt="Angular SPA">
+        </a>
+      </div>
+
+      <ul class="b-navbar-nav b-flex__item">
+        <li class="b-navbar-nav__item" ng-class="{'b-navbar-nav__item_active':isActive('/users')}">
+          <a class="b-navbar-nav__link" href="#/users">Users</a>
+        </li>
+        <li class="b-navbar-nav__item" ng-class="{'b-navbar-nav__item_active':isActive('/modal')}">
+          <a class="b-navbar-nav__link" href="#/modal">Modal</a>
+        </li>
+        <li class="b-navbar-nav__item" ng-class="{'b-navbar-nav__item_active':isActive('/google-map')}">
+          <a  class="b-navbar-nav__link"ng-href="#/google-map">Google-Map</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

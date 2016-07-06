@@ -1,0 +1,67 @@
+@import "../utils/_mixins";
+
+.b-navbar__header {
+  display: inline-block;
+  text-align: left;
+  line-height: 53px;
+}
+
+.b-navbar__brand {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  color: $secondary-color;
+  display: inline-block;
+  vertical-align: middle;
+  width: 3.125rem;
+  height: 3.125rem;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @include respond-to(small) {
+    text-align: center;
+  }
+}
+
+.b-navbar-nav {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.b-navbar-nav__item {
+  display: inline-block;
+
+  &.b-navbar-nav__item_active {
+
+    .b-navbar-nav__link {
+      color: $secondary-color;
+      border-bottom-color: $secondary-color;
+    }
+  }
+}
+
+.b-navbar-nav__link {
+  display: inline-block;
+  color: $secondary-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+  font: $font-bold 1em $font-stack;
+  line-height: 3.375rem;
+  margin: 0;
+  padding: 0 1rem;
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: none;
+  }
+
+  @include respond-to(small) {
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+  }
+}

@@ -1,0 +1,50 @@
+@import "../utils/variables";
+
+.b-face {
+  width: 6.25rem;
+  height: 6.25rem;
+  position: relative;
+  border: 2px solid $brand-color;
+  border-radius: 50%;
+  margin: 1.25rem auto;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    width: 0.625rem;
+    height: 0.625rem;
+    top: 1.875rem;
+    border-radius: 10px;
+    background-color: $brand-color;
+  }
+
+  &:before {
+    left: 1.875rem;
+  }
+
+  &:after {
+    left: 3.75rem;
+  }
+
+}
+
+.b-face__mouth-holder {
+  width: 3.75rem;
+  height: 1.6rem;
+  left: 1.875rem;
+  top: 3.75rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.b-face__mouth {
+  width: 2.625rem;
+  height: 0;
+  border-radius: 30px;
+  border: 1px solid $brand-color;
+  position: absolute;
+  top: 0.4375rem;
+  left: 0;
+  bottom: auto;
+}

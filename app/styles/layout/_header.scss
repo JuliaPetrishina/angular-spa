@@ -1,0 +1,9 @@
+@import "../utils/_variables";
+
+.b-header{
+  width: 100%;
+  max-width: 100%;
+  background-color: $brand-color;
+  box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+  z-index: 10005;
+}

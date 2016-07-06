@@ -1,0 +1,109 @@
+@import "../utils/mixins";
+
+.b-btn__group {
+  @include respond-to(small) {
+    width: 100%;
+
+    .b-btn__group_inline {
+      display: block;
+    }
+
+    .b-btn {
+      width: 100%;
+
+      & ~ .b-btn {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.b-btn__group_inline {
+  display: inline-block;
+}
+
+.b-btn {
+  border: none;
+  display: inline-block;
+  outline: 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  padding: 0.4rem 0.8rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: $secondary-color;
+  font-weight: $font-bold;
+  font-size: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 2px;
+
+  & ~ .b-btn {
+    margin-left: 0.8rem;
+  }
+
+  &:hover {
+    box-shadow: 0 1px 15px 0 rgba(0, 0, 0, .5);
+  }
+
+  @include respond-to(small) {
+    padding: 0.3rem 0.6rem;
+    min-width: 77px;
+
+    & ~ .b-btn {
+      margin-top: 0.4rem;
+    }
+
+  }
+}
+
+.b-btn_primary {
+  background-color: $accent-color;
+
+  &:hover {
+    color: $accent-color;
+    background-color: $secondary-color;
+  }
+}
+
+.b-btn_big {
+  font-size: 1rem;
+  padding: 1.6rem 2.8rem;
+
+  @include respond-to(small) {
+    font-size: 0.7rem;
+  }
+}
+
+.b-btn_modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.b-btn_close {
+  width: 0.625rem;
+  height: 0.625rem;
+  cursor: pointer;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    height: 23px;
+    width: 2px;
+    top: 0;
+    right: 0.4375rem;
+    background: $brand-color;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+

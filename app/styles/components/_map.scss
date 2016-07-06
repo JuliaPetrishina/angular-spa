@@ -1,0 +1,17 @@
+@import "../utils/mixins";
+
+.b-map_holder{
+  padding: 0 1.25rem;
+
+}
+
+.b-map{
+  display: inline-block;
+  width: auto;
+  height: 70vh;
+
+  @include respond-to(small){
+    display: block;
+    width: 100%;
+  }
+}

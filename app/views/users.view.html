@@ -1,0 +1,34 @@
+
+<div ng-controller="UsersController" class="b-container">
+  <h1>Welcome to Users Table!</h1>
+
+  <div class="b-table-holder">
+    <table class="b-table">
+      <tr>
+        <th class="b-table__header">Name</th>
+        <th class="b-table__header b-table__cell_right">Action</th>
+      </tr>
+      <tr class="b-table__row" ng-repeat="user in users">
+        <td class="b-table__cell">{{user.name}}</td>
+        <td class="b-table__cell b-table__cell_right">
+          <a class="b-btn b-btn_primary" ng-click="remove(user)">Remove</a>
+          <a class="b-btn b-btn_primary" ng-click="edit(user)">Edit</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+  <form class="b-form b-form__inline b-flex">
+    <div class="b-form__group b-flex__item">
+      <input class="b-form__control" type="text" ng-model="name" class="form-control" id="userName" placeholder="User Name">
+    </div>
+    <div class="b-btn__group b-btn__group_inline  b-flex__item">
+      <button class="b-btn b-btn_primary" ng-click="add()">Add</button>
+      <button class="b-btn b-btn_primary" ng-click="save()">Save</button>
+    </div>
+
+  </form>
+</div>
+
+

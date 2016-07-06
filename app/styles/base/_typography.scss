@@ -1,0 +1,28 @@
+@import "../utils/mixins";
+
+body {
+  font: 400 100% $font-stack;
+  line-height: $vertical-rhythm-baseline;
+  color: $gray-boulder;
+  min-width: 320px;
+}
+
+ul, li{
+  list-style: none;
+}
+
+a:active,
+a:focus{
+  outline: none;
+}
+
+h1{
+  text-align: center;
+  margin: 2rem 0;
+  font-weight: $font-light;
+
+  @include respond-to(small) {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+  }
+}
